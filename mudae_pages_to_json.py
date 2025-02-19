@@ -65,7 +65,7 @@ async def on_message(message):
         current_command = message.content.strip().replace(" ", "_")  # Store command, Replace spaces with _
 
         # Convert message timestamp to the desired format
-        timestamp = message.created_at.strftime("%Y%m%d_%H:%M:%S")  # Extracts up to seconds
+        timestamp = message.created_at.strftime("%Y%m%d_%H%M%S")  # Extracts up to seconds
 
         # Set the filename (removing "$" from the command name)
         save_filename = f"{current_command[1:]}_{timestamp}.json"

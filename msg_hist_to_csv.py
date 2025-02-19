@@ -73,7 +73,7 @@ async def on_ready():
                         'timestamp': message.created_at
                     })
             
-            latest_timestamp = messages[0]["timestamp"].strftime("%Y%m%d_%H:%M:%S")  # Most recent message timestamp
+            latest_timestamp = messages[0]["timestamp"].strftime("%Y%m%d_%H%M%S")  # Most recent message timestamp
             limit_str = str(msg_limit) if msg_limit is not None else "All"  # Use "All" for full history
             filename = f"data/hist{limit_str}msgs_{latest_timestamp}.csv"
 
